@@ -1,77 +1,86 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #fafafa;
-  color: #333;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
+            font-family: 'Inter', Arial, sans-serif;
+            min-height: 100vh;
+            background-color: #F8F9FA; /* Fondo muy claro */
+        }
 
-header {
-  background: #222;
-  color: white;
-  padding: 1rem;
-}
+        /* --- GALERÍA (CARRUSEL) --- */
+        .galeria {
+            position: relative;
+            width: 100%;
+            max-width: 550px; /* Tamaño máximo para que se vea bien en escritorio */
+            margin: auto;
+            border-radius: 12px;
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
 
-.galeria {
-  margin-top: 30px;
-}
+        .galeria img {
+            width: 100%;
+            height: 380px; /* Altura generosa para el efecto visual */
+            display: block;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
 
-.galeria img {
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  object-fit: cover;
-}
+        .controles {
+            position: absolute;
+            bottom: 20px; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
 
-.controles button {
-  margin: 10px;
-  padding: 10px 20px;
-  border: none;
-  background: #333;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        .controles button {
+            padding: 10px 25px;
+            border: 2px solid white;
+            background: rgba(0, 0, 0, 0.65); /* Fondo semitransparente oscuro */
+            color: white;
+            border-radius: 9999px; /* Totalmente redondeado (píldora) */
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
 
-.controles button:hover {
-  background: #666;
-}
+        .controles button:hover {
+            background: #2563EB; /* Azul vibrante al pasar el mouse */
+            border-color: #2563EB;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
+        }
+        
+        /* --- LIGHTBOX (MODAL) --- */
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000; 
+            backdrop-filter: blur(5px);
+        }
 
-/* LIGHTBOX */
-#lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        #lightbox .contenido {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
 
-.contenido {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-}
-
-.oculto {
-  display: none !important;
-}
-
-.traduccion {
-  margin-top: 30px;
-}
-
-#traducir {
-  margin-top: 10px;
-  padding: 8px 15px;
-  border: none;
-  background: #0066cc;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        .oculto {
+            display: none !important;
+        }
