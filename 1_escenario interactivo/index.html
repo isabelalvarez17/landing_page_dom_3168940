@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuegos</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gray-100">
+
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Minijuegos</h1>
+
+    <div class="main-container">
+    
+        <div id="game1" class="game-content">
+            <h2 class="text-2xl font-semibold text-center mb-4">Atrapa los Peces y Monedas</h2>
+            <p class="text-center text-gray-600 mb-4">Usa las flechas del teclado para mover al gato</p>
+            
+            <div id="game1-container" class="game-container" style="background-image: url('img/fondo.png'); background-size: cover; background-repeat: no-repeat;">
+              
+                <div class="ui-score">
+
+                    <img src="img/icono.pez.png" alt="Icono Pez" class="ui-icon">
+                    <span id="gato-score-text">0</span>
+                </div>
+                <div class="ui-lives">
+                    <img src="img/icono.vida.png" alt="Icono vida" class="ui-icon">
+                    <span id="gato-lives-text">1</span>
+                </div>
+
+              
+                <img src="img/gato.png" alt="Gato" class="player" id="gato">
+
+                <img src="img/nube.png" alt="Nube" class="asset" id="nube1">
+                
+                <img src="img/pez.png" alt="Pez 1" class="asset interactable" id="pez1">
+                <img src="img/pez.png" alt="Pez 2" class="asset interactable" id="pez2">
+                <img src="img/moneda.png" alt="Moneda" class="asset interactable animatable" id="moneda1">
+                <img src="img/corazon.png" alt="Corazón" class="asset interactable animatable" id="corazon1">
+                <img src="img/pez.png" alt="Pez 3" class="asset interactable" id="pez3">
+                <img src="img/pez.png" alt="Pez 4" class="asset interactable" id="pez4">
+
+            </div>
+        </div>
+
+        <div id="game2" class="game-content">
+            <h2 class="text-2xl font-semibold text-center mb-4">Escenario 2: Vacas Atrapadas</h2>
+            <p class="text-center text-gray-600 mb-4">Haz click en las vacas para atraparlas. ¡Cuidado con las flotantes!</p>
+
+            <div id="game2-container" class="game-container">
+               
+                <div class="ui-score">
+                    <img src="img/icono.vaca.png" alt="Icono Vaca" class="ui-icon">
+                    <span id="vaca-score-text">0</span>
+                </div>
+
+                <img src="img/vaca1.png" alt="Vaca 1" class="asset interactable vaca-click" id="vaca1">
+                <img src="img/vaca2.png" alt="Vaca 2" class="asset interactable vaca-click" id="vaca2">
+                <img src="img/vaca3.png" alt="Vaca 3" class="asset interactable vaca-click" id="vaca3">
+                <img src="img/vaca4.png" alt="Vaca 4" class="asset interactable vaca-click" id="vaca4">
+
+                <img src="img/vacaroja.png" alt="Vaca Animada 1" class="asset interactable vaca-anim" id="vaca-anim1">
+                <img src="img/vacaazul.png" alt="Vaca Animada 2" class="asset interactable vaca-anim" id="vaca-anim2">
+            </div>
+        </div>
+
+        <div id="game3" class="game-content">
+            <h2 class="text-2xl font-semibold text-center mb-4">Escenario 3: Comida Flotante</h2>
+            <p class="text-center text-gray-600 mb-4">¡Atrapa toda la comida que puedas!</p>
+
+            <div id="game3-container" class="game-container" style="background-image: url('img/fondo3.png'); background-size: cover; background-repeat: no-repeat;">
+              
+                <div class="ui-score">
+                    <img src="img/icono.comida.png" alt="Icono Comida" class="ui-icon">
+                    <span id="comida-score-text">0</span>
+                </div>
+
+                <img src="img/comida1.png" alt="Comida 1" class="asset interactable comida-click" id="comida1">
+                <img src="img/comida2.png" alt="Comida 2" class="asset interactable comida-click" id="comida2">
+                <img src="img/comida3.png" alt="Comida 3" class="asset interactable comida-click" id="comida3">
+                <img src="img/comida4.png" alt="Comida 4" class="asset interactable comida-click" id="comida4">
+
+                <img src="img/icono.dona.png" alt="Comida Animada 1" class="asset interactable comida-anim" id="comida-anim1">
+                <img src="img/icono.helado.png" alt="Comida Animada 2" class="asset interactable comida-anim" id="comida-anim2">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
